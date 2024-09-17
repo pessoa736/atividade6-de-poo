@@ -16,7 +16,7 @@ class Endereco{
             $this->dados_enderecias[$key] = $endereco[$key];
         }
     }
-    private function check_key(key $key){
+    private function check_key($key){
         foreach ($this->keysValidas as $_key=>$value){
             if ($value == $key) {
                 return true;
@@ -41,19 +41,34 @@ class Cliente{
     private $endereco;
     
     public function __construct(string $nome,Endereco $endereco){
+        $this->nome = $nome;
+        $this->endereco = $endereco;
+    }
+
+    public function MostraInformacoes(){
+        $str = "Cliente: \n";
+        $str .= "\tnome: $this->nome\n";
+        $str .= $this->endereco->MostrarEndereco()."\n";
+
+        return $str;
+    }
 }
 
 //test
 
-// $endereco = new Endereco(
-//     [
-//         "Rua"=>                  "Av. Nevaldo Rocha",
-//         "Bairro"=>               "Tirol",
-//         "Cidade"=>               "Natal",
-//         "Estado"=>               "Rio grande do norte",
-//         "N residencial"=>         "3775",
-//         "CEP"=>                  "59015-450"
-//     ]
-// );
+$cliente = new Cliente(
+    "michael json", 
+    new Endereco(
+     [
+            "Rua"=>                  "Av. Nevaldo Rocha",
+            "Bairro"=>               "Tirol",
+            "Cidade"=>               "Natal",
+            "Estado"=>               "Rio grande do norte",
+            "N residencial"=>         "3775",
+            "CEP"=>                  "59015-450",
+            "informação que não vai aparecer" => "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+    )
+);
 
-// echo $endereco->mostrarEndereco();
+echo $cliente->MostraInformacoes();

@@ -1,0 +1,7 @@
+Composição de Cliente e Endereço
+Crie duas classes: Cliente e Endereco. Um Cliente deve ter um Endereco, e você deve criar um método para exibir as informações completas do cliente, incluindo o endereço.
+
+Requisitos:
+A classe Endereco deve ter as propriedades $rua, $cidade e $cep, além de um método mostrarEndereco() para exibir o endereço completo.
+A classe Cliente deve ter as propriedades $nome e $endereco (um objeto da classe Endereco).
+A classe Cliente deve ter um método mostrarInformacoes() para exibir o nome do cliente e seu endereço.

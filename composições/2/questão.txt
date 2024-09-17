@@ -1,0 +1,6 @@
+Crie duas classes: Pedido e Produto. Um Pedido pode conter vários Produtos, e o valor total do pedido deve ser calculado com base nos produtos adicionados.
+
+Requisitos:
+A classe Produto deve ter as propriedades $nome e $preco, além de um método getPreco().
+A classe Pedido deve conter uma lista de produtos e um método adicionarProduto() para adicionar um produto ao pedido.
+A classe Pedido deve ter um método calcularTotal() para calcular o valor total dos produtos no pedido.

@@ -7,17 +7,16 @@ class Endereco{
     protected $keysValidas;
     public function __construct($endereco){
         //$rua, $bairo, $cidade, estado, $n_de_residencia, $cep){
-        foreach ($endereco as $key => $value) {
-            $this->$keysValidas = [
+        $this->keysValidas = [
                 "rua", "bairro", "cidade", "estado", "n residencial", "cep",
                 "Rua", "Bairro", "Cidade", "Estado", "n Residencial", "CEP",
                 "N residencial", "N Residencial"
-            ];
+        ];
+        foreach ($endereco as $key => $value) {
             $this->dados_enderecias[$key] = $endereco[$key];
         }
     }
-    private function check_key($key){
-        $result = false
+    private function check_key(key $key){
         foreach ($this->keysValidas as $_key=>$value){
             if ($value == $key) {
                 return true;
@@ -38,20 +37,23 @@ class Endereco{
 }
 
 class Cliente{
-
+    public $nome;
+    private $endereco;
+    
+    public function __construct(string $nome,Endereco $endereco){
 }
 
 //test
 
-$endereco = new Endereco(
-    [
-    "rua"=>                  "Av. Nevaldo Rocha",
-    "Bairro"=>               "Tirol",
-    "cidade"=>               "Natal",
-    "Estado"=>               "Rio grande do norte",
-    "n residencial"=>         "3775",
-    "CEP"=>                  "59015-450",
-    ]
-);
+// $endereco = new Endereco(
+//     [
+//         "Rua"=>                  "Av. Nevaldo Rocha",
+//         "Bairro"=>               "Tirol",
+//         "Cidade"=>               "Natal",
+//         "Estado"=>               "Rio grande do norte",
+//         "N residencial"=>         "3775",
+//         "CEP"=>                  "59015-450"
+//     ]
+// );
 
-echo $endereco->mostrarEndereco();
+// echo $endereco->mostrarEndereco();

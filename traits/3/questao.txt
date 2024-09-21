@@ -1,0 +1,6 @@
+Crie uma trait chamada Registro para registrar as ações de um sistema. Use essa trait em duas classes: Pedido e Entrega.
+
+Requisitos:
+A trait Registro deve ter um método registrarAcao($mensagem) que imprime: "Ação registrada: [mensagem]".
+A classe Pedido deve usar esse método para registrar quando um pedido é criado.
+A classe Entrega deve usar esse método para registrar quando uma entrega é realizada.

@@ -1,0 +1,8 @@
+Desafio das traits
+
+Crie uma trait chamada Saudacao que contenha um método para saudar um usuário. Depois, aplique essa trait em duas classes diferentes: Cliente e Funcionario.
+
+Requisitos:
+A trait Saudacao deve ter um método saudar() que exibe a saudação: "Olá, [nome]!".
+A classe Cliente deve receber o nome do cliente e usar o método saudar().
+A classe Funcionario deve fazer o mesmo para o funcionário.

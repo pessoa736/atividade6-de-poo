@@ -1,0 +1,6 @@
+Crie uma trait chamada CalculoArea com métodos para calcular a área de diferentes formas geométricas. Aplique essa trait em duas classes: Quadrado e Retangulo.
+
+Requisitos:
+A trait CalculoArea deve ter dois métodos: calcularAreaQuadrado($lado) e calcularAreaRetangulo($largura, $altura).
+A classe Quadrado deve usar o método calcularAreaQuadrado().
+A classe Retangulo deve usar o método calcularAreaRetangulo().
